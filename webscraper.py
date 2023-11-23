@@ -2,7 +2,7 @@ import httplib2, json
 from bs4 import BeautifulSoup, SoupStrainer
 
 def buscarVideo(pesquisa):
-    url = f'https://www.youtube.com/results?search_query={busca.replace(" ","+")}'
+    url = f'https://www.youtube.com/results?search_query={pesquisa.replace(" ","+")}'
 
     http = httplib2.Http()
 
@@ -25,6 +25,3 @@ def buscarVideo(pesquisa):
     return link_video
 
 
-busca = str(input('DIGA UMA PESQUISA NO YOUTUBE: '))
-resultado = buscarVideo(busca)
-print(resultado)
