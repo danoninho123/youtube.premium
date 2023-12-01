@@ -1,4 +1,6 @@
 import pywhatkit
 from webscraper import buscarVideo
-link = buscarVideo(str(input('diz: ')))
-pywhatkit.playonyt(link)
+
+def abrirYoutube(ENTRADA):
+    link = buscarVideo(ENTRADA)
+    pywhatkit.playonyt(link)
